@@ -20,6 +20,19 @@ function App() {
   // Select category
   const onCategoryChange = (categoryId) => {
     setSelectedCategory(categoryId);
+    console.log(categoryId);
+  };
+
+  // Search Term
+  const onSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+    console.log(event.target.value);
+  };
+
+  // Veh only
+  const onVegOnlyChange = () => {
+    setVegOnly((prev) => !prev);
+    console.log(vegOnly);
   };
 
   return (
@@ -35,9 +48,14 @@ function App() {
           <p>Choose your perfect party menu</p>
         </div>
       </header>
+      {/* Filter */}
       <Filters
         activeCategory={selectedCategory}
         onCategoryChange={onCategoryChange}
+        searchTerm={searchTerm}
+        onSearchChange={onSearchChange}
+        vegOnly={vegOnly}
+        onVegOnlyChange={onVegOnlyChange}
       />
     </div>
   );
