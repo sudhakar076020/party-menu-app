@@ -7,266 +7,208 @@
 }
 
 .App {
-  background-color: rgb(255, 200, 90);
+  background: linear-gradient(0deg, #fff 0%, #fff 100%);
   min-height: 100vh;
-}
-
-/* Header Section Styles  App.js*/
-.header-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  background-color: #ffffff;
-  padding: 25px 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.header-icon {
-  /* border: 1px solid red; */
-  position: relative;
-}
-
-.chef-hat-icon {
-  font-size: 45px;
-  color: rgb(255, 166, 0);
-}
-
-.stars-icon {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  font-size: 20px;
-  color: rgb(255, 187, 0);
-}
-
-.header-titles h1 {
-  font-size: 2.1rem;
-  font-weight: 600;
-  color: #df321f;
-}
-
-.header-titles p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #4b5563;
-  padding-top: 5px;
+  padding: 15px;
 }
 
 /* Filters Component Styles */
 .fliter-section-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  width: 100%;
+  gap: 20px;
+  /* border: 2px solid red; */
 }
-
-.filter-section {
-  margin: 15px 20px;
-  padding: 10px 15px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 30px 25px;
-  box-sizing: content-box;
-  width: 75%;
-}
-
-.category-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 35px;
-  list-style-type: none;
-}
-
-.category-btn {
-  padding: 10px 15px;
-  border: none;
-  outline: none;
-  color: #1b1b11;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.category-btn:hover {
-  color: goldenrod;
-}
-
-.active-category {
-  color: goldenrod;
-  border-bottom: 2px solid goldenrod;
-}
-
-/* filters-items */
-.filters-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 25px;
-}
-
-/* Search input section */
+/* Search Section  */
 .search-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
-  border: 1px solid #1b1b11;
+  border-radius: 6px;
+  border: 1px solid #adadad;
+  background: #fff;
+  padding: 2px 18px;
+  width: 100%;
 }
 
 .search-box {
-  position: relative;
-  display: block;
   width: 100%;
-  display: flex;
-  border-radius: 6px;
-  padding: 15px 12px;
-  text-align: left;
-  background-color: #ffffff;
+  padding-left: 5px;
 }
 
-.search-icon {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-  color: #373737;
-  font-size: 22px;
-}
-
-.input,
-.category-dropdown {
-  background-color: #ffffff;
-  outline: none;
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
   border: none;
-  color: #333;
+  outline: none;
+  color: #606060;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Category Section */
+.category-list-section {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.category-item {
+  border-radius: 6px;
+  border: 1px solid #adadad;
+  background: #fff;
+  padding: 8px 15px;
+  color: #1c1c1c;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.active-category-item {
+  border-radius: 6px;
+  border: 1px solid #ff941a;
+  background: #ff941a;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Category wise selected dish cound + Toggle veg or Non-veg */
+.category-dish-seleted-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
-.input::placeholder {
-  color: #8e8b8b;
+.category-dish-seleted-count p {
+  color: #1c1c1c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-/* Veg only toggle input */
-.toggle-switch {
-  width: auto;
+/* Toggle Veg or Non-Veg */
+/* Toggle container */
+.toggle-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
-  padding: 15px 12px;
-  text-align: left;
-  order: 2;
+  gap: 15px;
 }
 
-.dot-icon {
-  font-size: 22px;
-  color: #228b22;
-  border: 1px solid #228b22;
-  margin-right: 10px;
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.toggle-veg-only {
+/* hide native checkbox */
+.toggle-veg-only,
+.toggle-nonveg-only {
   display: none;
 }
 
-.toggle-veg-label {
-  width: 44px;
-  height: 22px;
-  background: #ddd;
-  border-radius: 44px;
+/* capsule (outer track) */
+.toggle-veg-label,
+.toggle-nonveg-label {
+  width: 64px;
+  height: 30px;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
   position: relative;
+  border-radius: 40px;
+  border: 1.5px solid #e8e8e8;
+  background: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.track-line {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 8px;
+  border-radius: 8px;
+  background: #e6e6e6;
+  z-index: 1;
+  transition: background 0.25s ease, opacity 0.25s ease;
+}
+
+.square {
+  width: 20px; /* square width */
+  height: 20px; /* square height */
+  border-radius: 6px;
+
+  background: transparent;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  justify-content: center;
+  z-index: 2; /* above track-line */
+  transform: translateX(0);
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.toggle-veg-label::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
+.veg-square {
+  border: 2px solid #539a64; /* green border */
+}
+
+.nonVeg-square {
+  border: 1.182px solid #e2574c;
+}
+
+/* inner circle inside the square */
+.circle {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 1px solid #228b22;
-  position: absolute;
-  left: 2px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.veg-circle {
+  background: #539a64; /* green dot */
+}
+
+.nonVeg-circle {
+  background: #e2574c;
+}
+
+/* Veg label toggling */
 .toggle-veg-only:checked + .toggle-veg-label {
-  background: linear-gradient(45deg, #228b22, #6be36b);
+  background: linear-gradient(45deg, #539a64, #6be36b);
 }
 
-.toggle-veg-only:checked + .toggle-veg-label::before {
-  transform: translateX(22px);
+.toggle-veg-only:checked + .toggle-veg-label .veg-square {
+  transform: translateX(28px);
 }
 
-/* Dropdown category small devices */
-.drop-down-menu {
-  width: 250px;
-  max-width: 320px;
-  display: flex;
-  border-radius: 6px;
-  padding: 15px 12px;
-  text-align: left;
-  background-color: #ffffff;
+.toggle-veg-only:checked + .toggle-veg-label .track-line {
+  background: rgba(255, 255, 255, 0.32);
 }
 
-/* Categoru DropDown menu small devices */
-/* Small screen layout */
-@media screen and (max-width: 768px) {
-  .filter-section {
-    width: 90%;
-  }
-
-  /* Hide tabs on small screens */
-  .category-list {
-    display: none;
-  }
-
-  /* Stack search below */
-  .filters-items {
-    flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
-  }
-
-  /* Group dropdown + toggle in one row */
-  .drop-down-toggle-row {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .drop-down-menu,
-  .toggle-switch {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-
-  .search-section {
-    width: 100%;
-    order: 3;
-  }
-
-  .search-box {
-    width: 100%;
-  }
+/* Non-Veg label toggling */
+.toggle-nonveg-only:checked + .toggle-nonveg-label {
+  background: linear-gradient(45deg, #f6a39d, #f25247);
 }
 
-/* Hide dropdown on large screens */
-@media screen and (min-width: 769px) {
-  .drop-down-menu {
-    display: none;
-  }
+.toggle-nonveg-only:checked + .toggle-nonveg-label .nonVeg-square {
+  transform: translateX(28px);
+}
+
+.toggle-nonveg-only:checked + .toggle-nonveg-label .track-line {
+  background: rgba(255, 255, 255, 0.32);
 }

@@ -1,4 +1,4 @@
-export const dishes = [
+const dishes = [
   // MAIN COURSE (7 items)
   {
     id: 1,
@@ -501,3 +501,6 @@ export const dishes = [
     ],
   },
 ];
+
+
+export default dishes;
