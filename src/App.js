@@ -58,7 +58,7 @@ function App() {
       />
 
       {/* DishList */}
-      {/* <DishList dishes={dishes} /> */}
+      <DishList dishes={dishes} />
     </div>
   );
 }
