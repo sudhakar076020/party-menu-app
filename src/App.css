@@ -72,6 +72,7 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .active-category-item {
@@ -311,6 +312,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 /* Dish card right side */
@@ -353,16 +355,12 @@
 }
 
 .add-btn {
-  color: #73ae78;
+  color: #73ae78 !important;
 }
 
 .remove-btn {
-  color: #ff941a;
-}
-
-.dish-img-content button:hover {
-  background-color: #539a64;
-  color: #ffffff;
+  color: #ff941a !important;
+  padding: 6px 7px;
 }
 
 /* Top section (title + image) */
@@ -371,6 +369,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  margin-top: 25px;
 }
 
 .top-section .content {
@@ -423,6 +422,7 @@
 }
 
 /* Ingredients list */
+
 .ingredients-items {
   list-style: none;
   margin: 0;
@@ -445,6 +445,7 @@
 }
 
 /* Model css */
+
 .modal {
   background-color: #ffffff;
   height: 100vh;
@@ -473,23 +474,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background-color: #ffffff;
+  width: 100%;
 }
 
 .modal-close-btn {
   cursor: pointer;
   position: absolute;
   display: block;
-  padding: 2px 5px;
+  padding: 15px 5px;
   line-height: 20px;
-  left: 5px;
-  top: 15px;
+  left: 0px;
+  top: 0;
   font-size: 16px;
-  background: transparent;
-  border-radius: 18px;
   border: none;
   outline: none;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+}
+
+/* No Dishes section */
+.no-dishes-container {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.no-dishes-container p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1c1c1c;
 }

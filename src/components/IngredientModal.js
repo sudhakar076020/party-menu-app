@@ -1,18 +1,36 @@
 import "../App.css";
 
-const IngredientModel = (props) => {
-  const { ingredientsList, dishName, dishDescription } = props;
+const IngredientModal = ({ dish, onClose }) => {
+  if (!dish) return null;
+
   return (
     <div className="ingredient-container">
+      <div className="modal-close-header">
+        <button className="modal-close-btn" onClick={onClose}>
+          {" "}
+          {/* Left arrow */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M9.34299 0.930737L4 5.96535L9.34299 11"
+              stroke="#1C1C1C"
+              strokeWidth="2"
+            />
+          </svg>{" "}
+          Ingredient
+        </button>
+      </div>
       <div className="top-section">
         <div className="content">
-          <h3>{dishName}</h3>
-          <p>{dishDescription}</p>
+          <h3>{dish.name}</h3>
+          <p>{dish.description}</p>
         </div>
-        <img
-          src="https://res.cloudinary.com/dehz5pshe/image/upload/v1757782910/9575ae5a678baeb9141729afef2ba06ec64b3cab_izmwu9.png"
-          alt="ingrediant image"
-        />
+        <img src={dish.image} alt={dish.name} />
       </div>
 
       <div className="ingredient-title">
@@ -22,7 +40,7 @@ const IngredientModel = (props) => {
       </div>
 
       <ul className="ingredients-items">
-        {ingredientsList.map((item, index) => (
+        {dish.ingredients.map((item, index) => (
           <li key={index}>
             <h2>{item.name}</h2>
             <p>{item.quantity}</p>
@@ -33,4 +51,4 @@ const IngredientModel = (props) => {
   );
 };
 
-export default IngredientModel;
+export default IngredientModal;

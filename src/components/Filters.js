@@ -1,6 +1,4 @@
 import "../App.css";
-// import { IoIosSearch } from "react-icons/io"; // Search icon
-// import { GoDotFill } from "react-icons/go"; // Dot
 
 const categoryList = [
   { id: "STARTER", label: "Starter" },
@@ -18,7 +16,8 @@ const Filters = (props) => {
     vegOnly,
     onVegOnlyChange,
     nonvegOnly,
-    onNonVegOnlyChange
+    onNonVegOnlyChange,
+    selectedDishes,
   } = props;
 
   return (
@@ -98,12 +97,20 @@ const Filters = (props) => {
       <div className="category-dish-seleted-count">
         <p>
           {`${activeCategory
-            .toLowerCase() // first convert everything to lowercase
-            .split(" ") // split into words
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize first letter
+            .toLowerCase()
+            .split(" ")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ")} Selected `}
-          <span>(0)</span>
+          <span>
+            (
+            {
+              selectedDishes.filter((item) => item.mealType === activeCategory)
+                .length
+            }
+            )
+          </span>
         </p>
+
         {/* Toggle Veg or Non-veg */}
         <div className="veg-nonVeg-card">
           {/* Veg */}

@@ -1,14 +1,10 @@
 import "./App.css";
-
 import { useState } from "react";
-
-// React Icons
-import { TbChefHat } from "react-icons/tb"; //Chef hat
-import { BsStars } from "react-icons/bs"; //Stars
 
 import dishes from "./data/mockDishes";
 import Filters from "./components/Filters";
 import DishList from "./components/DishList";
+import IngredientModal from "./components/IngredientModal";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("STARTER");
@@ -19,46 +15,89 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentDish, setCurrentDish] = useState(null);
 
-  // Select category
-  const onCategoryChange = (categoryId) => {
-    setSelectedCategory(categoryId);
-    console.log(categoryId);
-  };
+  // Filtered Dishes
+  const filteredDishes = dishes.filter((dish) => {
+    // Category match
+    const categoryMatch =
+      selectedCategory === "ALL" || dish.mealType === selectedCategory;
 
-  // Search Term
+    // Search term match
+    const searchMatch = dish.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+
+    // Veg/Non-Veg match logic
+    let typeMatch = true;
+    if (vegOnly && !nonvegOnly) {
+      typeMatch = dish.type === "VEG";
+    } else if (!vegOnly && nonvegOnly) {
+      typeMatch = dish.type === "NON-VEG";
+    }
+    // If both are true or both are false, show all types (typeMatch = true)
+
+    return categoryMatch && searchMatch && typeMatch;
+  });
+
+  // Search Input
   const onSearchChange = (event) => {
     setSearchTerm(event.target.value);
     console.log(event.target.value);
   };
 
-  // Veg only
-  const onVegOnlyChange = () => {
-    setVegOnly((prev) => !prev);
-    console.log(vegOnly);
+  // Add Ingredients
+  const handleAddDish = (dish) => {
+    if (!selectedDishes.find((item) => item.id === dish.id)) {
+      setSelectedDishes([...selectedDishes, dish]);
+      console.log(selectedDishes);
+    }
   };
 
-  // Non-Veg only
-  const onNonVegOnlyChange = () => {
-    setNonVegOnly((prev) => !prev);
-    console.log(nonvegOnly);
+  // Remove Ingredients
+  const handleRemoveDish = (dishId) => {
+    setSelectedDishes(selectedDishes.filter((item) => item.id !== dishId));
+  };
+
+  // View Ingredient
+  const handleViewIngredients = (dish) => {
+    setCurrentDish(dish);
+    setIsModalOpen(true);
+  };
+
+  // Close Model
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setCurrentDish(null);
   };
 
   return (
     <div className="App">
-      {/* Filter */}
-      <Filters
-        activeCategory={selectedCategory}
-        onCategoryChange={onCategoryChange}
-        searchTerm={searchTerm}
-        onSearchChange={onSearchChange}
-        vegOnly={vegOnly}
-        onVegOnlyChange={onVegOnlyChange}
-        nonvegOnly={nonvegOnly}
-        onNonVegOnlyChange={onNonVegOnlyChange}
-      />
+      {isModalOpen ? (
+        <IngredientModal dish={currentDish} onClose={handleCloseModal} />
+      ) : (
+        <>
+          {/* Filters */}
+          <Filters
+            activeCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+            searchTerm={searchTerm}
+            onSearchChange={onSearchChange}
+            vegOnly={vegOnly}
+            onVegOnlyChange={() => setVegOnly((prev) => !prev)}
+            nonvegOnly={nonvegOnly}
+            onNonVegOnlyChange={() => setNonVegOnly((prev) => !prev)}
+            selectedDishes={selectedDishes}
+          />
 
-      {/* DishList */}
-      <DishList dishes={dishes} />
+          {/* Dish List */}
+          <DishList
+            dishes={filteredDishes}
+            selectedDishes={selectedDishes}
+            onAddDish={handleAddDish}
+            onRemoveDish={handleRemoveDish}
+            onViewIngredients={handleViewIngredients}
+          />
+        </>
+      )}
     </div>
   );
 }

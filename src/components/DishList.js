@@ -1,24 +1,31 @@
 import "../App.css";
-
 import DishCard from "./DishCard";
 
-const DishList = (props) => {
-  const { dishes, onAddDish, onRemoveDish, selectedDishes, onViewIngredients } =
-    props;
-
-  console.log(dishes);
+const DishList = ({
+  dishes,
+  selectedDishes,
+  onAddDish,
+  onRemoveDish,
+  onViewIngredients,
+}) => {
   return (
     <div className="dishlist-section">
-      {dishes.map((dish) => (
-        <DishCard
-          key={dish.id}
-          dish={dish} // single dish item
-          onAddDish={onAddDish}
-          onRemoveDish={onRemoveDish}
-          selectedDishes={selectedDishes}
-          onViewIngredients={onViewIngredients}
-        />
-      ))}
+      {dishes.length === 0 ? (
+        <div className="no-dishes-container">
+          <p> No dishes available</p>
+        </div>
+      ) : (
+        dishes.map((dish) => (
+          <DishCard
+            key={dish.id}
+            dish={dish}
+            selectedDishes={selectedDishes}
+            onAddDish={onAddDish}
+            onRemoveDish={onRemoveDish}
+            onViewIngredients={onViewIngredients}
+          />
+        ))
+      )}
     </div>
   );
 };
