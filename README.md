@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+## Party Menu Selection App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Party Menu Selection App
 
-## Available Scripts
+A ReactJs web application to browse, filter, and select the dishes for your party.
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+The goal of this assignment is to build a "Party Menu Selection App". This is a web application where a user can browse a categorized menu of dishes, filter them based on different criteria, and select their desired items for a party.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Category tabs: Starter, Main Course, Dessert, Sides
 
-### `npm test`
+Search bar to find dishes by name
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Veg/Non-Veg filter toggles
 
-### `npm run build`
+Add and remove dishes from a selection list
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ingredient detail modal for each dish
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Summary view showing selected items and total count
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+## 1.Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    git clone <your-repository-link>
+    cd party-menu-app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2.Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 3.Run the development server:
 
-## Learn More
+    npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app will open at http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+party-menu-app/
+└── src/
+├── components/
+│ ├── DishCard.js
+│ ├── DishList.js
+│ ├── Filters.js
+│ └── IngredientModal.js
+├── data/
+│ └── mockDishes.js
+├── App.css
+└── App.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+1.Select a category tab to view dishes.
+2.Use the search bar or Veg/Non-Veg toggles to filter dishes.
+3.Click "Add +" to select dishes for your party.
+4.View and remove selected dishes.
+5.Click "Ingredient" to see dish ingredients in a modal.
+6.See the summary section for total selected items.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## State(useState Hook):
 
-### Making a Progressive Web App
+    State is data that a component "remembers" or manages. When the state of a component changes, React automatically re-renders the component to reflect those changes. The useState hook is how we add state to a functional component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Sample Mock Data
 
-### Advanced Configuration
+    // A sample structure based on your PDF. Add all dishes here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+export const dishes = [
+{
+"id": 1,
+"name": "Kadhai Paneer 1",
+"description": "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+"image": "[https://placehold.co/300x200/F7D0B3/422402?text=Kadhai+Paneer](https://placehold.co/300x200/F7D0B3/422402?text=Kadhai+Paneer)",
+"mealType": "MAIN COURSE",
+"type": "VEG",
+"ingredients": [
+{ "name": "Paneer", "quantity": "200g" },
+{ "name": "Onion", "quantity": "2 large" },
+{ "name": "Capsicum", "quantity": "1 large" },
+{ "name": "Tomato Puree", "quantity": "1 cup" }
+]
+},
+// ... add more dishes here for STARTER, DESSERT, SIDES and NON-VEG options
+];
 
-### Deployment
+## Build the Main App Component (App.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The App.js is the main component that manages the overall state of the application
 
-### `npm run build` fails to minify
+src/App.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+import useState and the mock data for the dishes.
+
+Create state variables:
+
+    - `selectedCategory`: To track the active tab ('STARTER', 'MAIN COURSE', etc.).
+    - `searchTerm`: To hold the value from the search bar.
+    - `vegOnly`: A boolean to track the veg filter.
+     - `nonVegOnly`: A boolean to track the nonveg filter.
+    - `selectedDishes`: An array to store the IDs of the dishes the user has added.
+    - `isModalOpen` and `currentDish`: To manage the ingredient details modal.
+    - `viewMode`: Is used to if the user click the selectedDishes the state should be triggered to open.
+
+### Create the UI Components
+
+### `Filters.js`
+
+This component will contain the category tabs, search bar, and veg/non-veg toggle.
+
+- **Props:** `activeCategory`, `onCategoryChange`, `searchTerm`, `onSearchChange`, `vegOnly`, `onVegOnlyChange`.
+- **Functionality:**
+  - Renders buttons for each category. The active one should have a different style. Clicking a button calls `onCategoryChange`.
+  - Renders an `<input type="text">` for search. Its `onChange` event calls `onSearchChange`.
+  - Renders a checkbox or toggle for the "Veg Only" filter.
+
+### `DishList.js`
+
+This component maps over the filtered dishes and renders a `DishCard` for each one.
+
+- **Props:** `dishes`, `onAddDish`, `onRemoveDish`, `selectedDishes`, `onViewIngredients`.
+- **Functionality:**
+  - Takes the array of `filteredDishes`.
+  - Uses `.map()` to render a `<DishCard>` for each dish.
+  - Passes all necessary props down to each `DishCard`.
+
+### `DishCard.js`
+
+This component displays the information for a single dish.
+
+- **Props:** `dish` (the dish object), `onAddDish`, `onRemoveDish`, `isSelected`, `onViewIngredients`.
+- **Functionality:**
+  - Displays the dish name, description, and image.
+  - Has an "Add" or "Remove" button based on the `isSelected` prop. Clicking the button calls `onAddDish(dish.id)` or `onRemoveDish(dish.id)`.
+  - Has an "Ingredients" button that calls `onViewIngredients(dish)`.
+
+### `IngredientModal.js` (Replaces Ingredient Detail Screen)
+
+For a web app, a modal is a better user experience than navigating to a new page for this feature.
+
+- **Props:** `dish`, `onClose`.
+- **Functionality:**
+  - If `dish` is not null, it displays a modal overlay.
+  - Shows the dish name, description, and a list of ingredients.
+  - Has a "Close" button which calls the `onClose` function.
+
+Additinally the browse the dish, veg/nonveg toggle, selectedDishes these are all the dishes are empty means the notifiy there was no dishes in the filters.
+
+## Add Styling (App.css)
+
+Added the all components styles in single .css file.
