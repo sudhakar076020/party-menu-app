@@ -2,10 +2,11 @@ const dishes = [
   // MAIN COURSE (7 items)
   {
     id: 1,
-    name: "Kadhai Paneer",
+    name: "Kadai Paneer",
     description:
       "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "https://placehold.co/300x200/F7D0B3/422402?text=Kadhai+Paneer",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-j1XdLKn31g1i4xhsLYgRw0eiuPzxMgyHpw&s",
     mealType: "MAIN COURSE",
     type: "VEG",
     ingredients: [
@@ -19,7 +20,8 @@ const dishes = [
     id: 2,
     name: "Butter Chicken",
     description: "Creamy tomato-based chicken curry, a North Indian classic.",
-    image: "https://placehold.co/300x200/E9A9A9/422402?text=Butter+Chicken",
+    image:
+      "https://www.licious.in/blog/wp-content/uploads/2020/10/butter-chicken--600x600.jpg",
     mealType: "MAIN COURSE",
     type: "NON-VEG",
     ingredients: [
@@ -33,7 +35,8 @@ const dishes = [
     id: 3,
     name: "Dal Tadka",
     description: "Yellow lentils tempered with garlic, cumin, and ghee.",
-    image: "https://placehold.co/300x200/F2E2B3/422402?text=Dal+Tadka",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4kLMn_YJz4DEPNat_gUTF_QWOxqKiIRWMQw&s",
     mealType: "MAIN COURSE",
     type: "VEG",
     ingredients: [
@@ -47,7 +50,8 @@ const dishes = [
     id: 4,
     name: "Mutton Rogan Josh",
     description: "Tender mutton cooked in aromatic Kashmiri spices.",
-    image: "https://placehold.co/300x200/D9A9A9/422402?text=Mutton+Rogan+Josh",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1gfC8Ma8JttP7IOFaPHT-7F0R79cTKsBWg&s",
     mealType: "MAIN COURSE",
     type: "NON-VEG",
     ingredients: [
@@ -61,7 +65,8 @@ const dishes = [
     id: 5,
     name: "Palak Paneer",
     description: "Cottage cheese cubes in creamy spinach gravy.",
-    image: "https://placehold.co/300x200/AED9B3/422402?text=Palak+Paneer",
+    image:
+      "https://www.vegkit.com/wp-content/uploads/sites/2/2024/02/palak_tofu_paneer_1.jpg",
     mealType: "MAIN COURSE",
     type: "VEG",
     ingredients: [
@@ -76,7 +81,8 @@ const dishes = [
     name: "Chicken Biryani",
     description:
       "Fragrant basmati rice cooked with marinated chicken and spices.",
-    image: "https://placehold.co/300x200/F2C6A9/422402?text=Chicken+Biryani",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaF6-1Auf1DuOXo9FhalxTrx1j-BnkoOu4A&s",
     mealType: "MAIN COURSE",
     type: "NON-VEG",
     ingredients: [
@@ -90,7 +96,7 @@ const dishes = [
     id: 7,
     name: "Chole Bhature",
     description: "Spicy chickpea curry served with fried bread.",
-    image: "https://placehold.co/300x200/F2E9A9/422402?text=Chole+Bhature",
+    image: "https://cdn.uengage.io/uploads/28289/image-14DG1B-1723180624.jpg",
     mealType: "MAIN COURSE",
     type: "VEG",
     ingredients: [
@@ -106,7 +112,8 @@ const dishes = [
     id: 8,
     name: "Paneer Tikka",
     description: "Grilled cottage cheese cubes marinated with spices.",
-    image: "https://placehold.co/300x200/F7C9B3/422402?text=Paneer+Tikka",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-stvhbpCIHk4_aVCxb0aekKPAJPLWM2FeA&s",
     mealType: "STARTER",
     type: "VEG",
     ingredients: [
@@ -120,7 +127,8 @@ const dishes = [
     id: 9,
     name: "Chicken Tikka",
     description: "Grilled chicken cubes marinated in yogurt and spices.",
-    image: "https://placehold.co/300x200/EAB9A9/422402?text=Chicken+Tikka",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ1fHA33FNRQNHUveifYriJS1H0AgEpGP4Cg&s",
     mealType: "STARTER",
     type: "NON-VEG",
     ingredients: [
@@ -134,7 +142,8 @@ const dishes = [
     id: 10,
     name: "Hara Bhara Kebab",
     description: "Spinach and pea cutlets shallow fried till crisp.",
-    image: "https://placehold.co/300x200/B3E9B3/422402?text=Hara+Bhara+Kebab",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ27xtDirRA99TJgiOPXGszfzJKO7OZSvGX_w&s",
     mealType: "STARTER",
     type: "VEG",
     ingredients: [
@@ -148,7 +157,8 @@ const dishes = [
     id: 11,
     name: "Fish Amritsari",
     description: "Crispy batter-fried fish with Punjabi spices.",
-    image: "https://placehold.co/300x200/D9E9F2/422402?text=Fish+Amritsari",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTNf3ebl5RlV-Eewymih5-ZKtKgpnFkEzliw&s",
     mealType: "STARTER",
     type: "NON-VEG",
     ingredients: [
@@ -162,7 +172,8 @@ const dishes = [
     id: 12,
     name: "Veg Spring Rolls",
     description: "Crispy rolls stuffed with vegetables and noodles.",
-    image: "https://placehold.co/300x200/F2D9B3/422402?text=Spring+Rolls",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2B4r8cbP9PTcip6kQXCcWT1EaQzdmJIpZEw&s",
     mealType: "STARTER",
     type: "VEG",
     ingredients: [
@@ -176,7 +187,8 @@ const dishes = [
     id: 13,
     name: "Mutton Seekh Kebab",
     description: "Minced mutton skewers grilled with spices.",
-    image: "https://placehold.co/300x200/E9D9C3/422402?text=Seekh+Kebab",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOT1BRyu02dqlMdS3CBQ-hOnWfG0FQ4xpYgrzoVgEQUoOYsfjhSteRYLhTsOM7NydxCRY&usqp=CAU",
     mealType: "STARTER",
     type: "NON-VEG",
     ingredients: [
@@ -190,7 +202,8 @@ const dishes = [
     id: 14,
     name: "Aloo Tikki",
     description: "Crispy potato patties served with chutneys.",
-    image: "https://placehold.co/300x200/F7E9A9/422402?text=Aloo+Tikki",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfog6rzs873OZN7T_7u7ra6L-wuFktF_n2g&s",
     mealType: "STARTER",
     type: "VEG",
     ingredients: [
@@ -206,7 +219,8 @@ const dishes = [
     id: 15,
     name: "Gulab Jamun",
     description: "Fried milk solids soaked in sugar syrup.",
-    image: "https://placehold.co/300x200/F2B9C3/422402?text=Gulab+Jamun",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5a8Ct6xN1M9Pne-2RXI-RNh1AaXcG4a-z0w&s",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -220,7 +234,8 @@ const dishes = [
     id: 16,
     name: "Rasgulla",
     description: "Spongy cheese balls soaked in sugar syrup.",
-    image: "https://placehold.co/300x200/D9F2F2/422402?text=Rasgulla",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTseOTMOPjrpmrEfq-eCo7lw09-vpvMxRHrpg&s",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -234,7 +249,8 @@ const dishes = [
     id: 17,
     name: "Kheer",
     description: "Rice pudding cooked with milk and sugar.",
-    image: "https://placehold.co/300x200/F2E2D9/422402?text=Kheer",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GM4gMUycHaUPFla7QT4nczWFR7mo93IGZQ&s",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -248,7 +264,8 @@ const dishes = [
     id: 18,
     name: "Jalebi",
     description: "Crispy spirals soaked in saffron sugar syrup.",
-    image: "https://placehold.co/300x200/E9F2A9/422402?text=Jalebi",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKqbstedp3QngdqJgZnPSVImPLZdelJtxx3g&s",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -262,7 +279,8 @@ const dishes = [
     id: 19,
     name: "Ice Cream",
     description: "Chilled creamy dessert in multiple flavors.",
-    image: "https://placehold.co/300x200/C3E9F2/422402?text=Ice+Cream",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg/960px-Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -276,7 +294,8 @@ const dishes = [
     id: 20,
     name: "Fruit Salad",
     description: "Mix of seasonal fruits with cream.",
-    image: "https://placehold.co/300x200/F2E9F2/422402?text=Fruit+Salad",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRglnMaAmQNUejUsXGK_E0TiaafXlxZlnkBfA&s",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -290,7 +309,8 @@ const dishes = [
     id: 21,
     name: "Brownie",
     description: "Rich chocolate dessert with nuts.",
-    image: "https://placehold.co/300x200/D9B3C3/422402?text=Brownie",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBW4W-3x_osH5jYgOQR69xyqjhHjE2xH1Ag&s",
     mealType: "DESSERT",
     type: "VEG",
     ingredients: [
@@ -306,7 +326,8 @@ const dishes = [
     id: 22,
     name: "Naan",
     description: "Soft and fluffy Indian flatbread.",
-    image: "https://placehold.co/300x200/F2E2B9/422402?text=Naan",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbhIBt1bfid1hVKLprQyN3Xd31fHVTyfmKg&s",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -320,7 +341,8 @@ const dishes = [
     id: 23,
     name: "Tandoori Roti",
     description: "Whole wheat roti cooked in tandoor.",
-    image: "https://placehold.co/300x200/E9E2C3/422402?text=Tandoori+Roti",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg5ev0V1mV1XlrwWSpO5haPNZ5AMLBTOhISw&s",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -334,7 +356,8 @@ const dishes = [
     id: 24,
     name: "Jeera Rice",
     description: "Basmati rice flavored with cumin seeds.",
-    image: "https://placehold.co/300x200/F2F2C3/422402?text=Jeera+Rice",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUMi8inD2J8HRTxS2V-XF22KT9ZMMNyA8rw&s",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -348,7 +371,8 @@ const dishes = [
     id: 25,
     name: "Papad",
     description: "Crispy fried or roasted papads.",
-    image: "https://placehold.co/300x200/F2D9C3/422402?text=Papad",
+    image:
+      "https://media.istockphoto.com/id/666595984/photo/indian-snacks-deep-fried-crackers-or-papad-mung-dal-and-urad-dal-papad-an-indian-fried-dish.jpg?s=612x612&w=0&k=20&c=WNBWP2z6sXYhPSFbfxmVJe1oVkWtQHY-lc7RbWeM84o=",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -362,7 +386,8 @@ const dishes = [
     id: 26,
     name: "Raita",
     description: "Yogurt-based side dish with cucumber.",
-    image: "https://placehold.co/300x200/D9E2E9/422402?text=Raita",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrAhGLFfwftm_DW2wwXyhMk3fn3t32twofGA&s",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -376,7 +401,8 @@ const dishes = [
     id: 27,
     name: "Pickle",
     description: "Tangy Indian pickle with spices.",
-    image: "https://placehold.co/300x200/F2E2E2/422402?text=Pickle",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKrU_Oz8Pywr--HF-nOp8fKLJIys68fNTGRQ&s",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -390,7 +416,8 @@ const dishes = [
     id: 28,
     name: "Salad",
     description: "Fresh mix of cucumber, tomato, and onion.",
-    image: "https://placehold.co/300x200/E2F2E9/422402?text=Salad",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__tuaCCeBfBPjeM7l81rHzPBAeMrbfDIIIw&s",
     mealType: "SIDES",
     type: "VEG",
     ingredients: [
@@ -406,7 +433,8 @@ const dishes = [
     id: 29,
     name: "Prawn Curry",
     description: "Juicy prawns cooked in spicy coconut gravy.",
-    image: "https://placehold.co/300x200/F2C9D9/422402?text=Prawn+Curry",
+    image:
+      "https://www.whiskaffair.com/wp-content/uploads/2023/02/Shrimp-Masala-2-3.jpg",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -420,7 +448,8 @@ const dishes = [
     id: 30,
     name: "Egg Curry",
     description: "Boiled eggs in spicy onion-tomato gravy.",
-    image: "https://placehold.co/300x200/E2E9F2/422402?text=Egg+Curry",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFg775n9jqDjvSqaqoA317_q34nzGd-Aj1hQ&s",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -434,7 +463,8 @@ const dishes = [
     id: 31,
     name: "Keema Matar",
     description: "Minced mutton cooked with peas and spices.",
-    image: "https://placehold.co/300x200/F2E2D9/422402?text=Keema+Matar",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjY2icxdLN8o8xvwKugKfdotLGGO2kHGSUw&s",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -448,7 +478,8 @@ const dishes = [
     id: 32,
     name: "Fish Curry",
     description: "Tangy fish curry with tamarind and spices.",
-    image: "https://placehold.co/300x200/D9C9E9/422402?text=Fish+Curry",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsVt2p5bZiNhPJkbc0HHBaFgAvpHT4wUsUGQ&s",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -462,7 +493,8 @@ const dishes = [
     id: 33,
     name: "Chicken 65",
     description: "Spicy deep-fried chicken bites.",
-    image: "https://placehold.co/300x200/F2E9C3/422402?text=Chicken+65",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLUylpXSB7u85LFAYqTeMTc1SBAuH-YKJ_Q&s",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -476,7 +508,8 @@ const dishes = [
     id: 34,
     name: "Chicken Curry",
     description: "Traditional Indian chicken curry with spices.",
-    image: "https://placehold.co/300x200/C3D9F2/422402?text=Chicken+Curry",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4KfliqLSvMmQa5rOpSHI2aPRDkOXM6frJ1g&s",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -490,7 +523,8 @@ const dishes = [
     id: 35,
     name: "Mutton Curry",
     description: "Slow-cooked mutton curry with onions and tomatoes.",
-    image: "https://placehold.co/300x200/E2D9C3/422402?text=Mutton+Curry",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7SeSLEi-KOmhSF8vUZCs-YfARFbsdlsWe9A&s",
     mealType: "NON-VEG",
     type: "NON-VEG",
     ingredients: [
@@ -501,6 +535,5 @@ const dishes = [
     ],
   },
 ];
-
 
 export default dishes;

@@ -5,26 +5,25 @@ const IngredientModal = ({ dish, onClose }) => {
 
   return (
     <div className="ingredient-container">
-      <div className="modal-close-header">
-        <button className="modal-close-btn" onClick={onClose}>
-          {" "}
-          {/* Left arrow */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            viewBox="0 0 12 12"
-            fill="none"
-          >
-            <path
-              d="M9.34299 0.930737L4 5.96535L9.34299 11"
-              stroke="#1C1C1C"
-              strokeWidth="2"
-            />
-          </svg>{" "}
-          Ingredient
-        </button>
-      </div>
+      <button className="modal-close-btn" onClick={onClose}>
+        {" "}
+        {/* Left arrow */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 12 12"
+          fill="none"
+        >
+          <path
+            d="M9.34299 0.930737L4 5.96535L9.34299 11"
+            stroke="#1C1C1C"
+            strokeWidth="2"
+          />
+        </svg>{" "}
+        Ingredient
+      </button>
+
       <div className="top-section">
         <div className="content">
           <h3>{dish.name}</h3>

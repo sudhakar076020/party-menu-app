@@ -6,13 +6,26 @@
   font-style: normal;
 }
 
+/* Party menu app whole container */
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Container */
+.container {
   background: linear-gradient(0deg, #fff 0%, #fff 100%);
   min-height: 100vh;
   padding: 15px;
+  max-width: 425px;
 }
 
+/* ========================== */
 /* Filters Component Styles */
+/* ========================== */
+
+/* Filter component Container */
 .fliter-section-container {
   display: flex;
   flex-direction: column;
@@ -20,9 +33,9 @@
   align-items: center;
   width: 100%;
   gap: 20px;
-  /* border: 2px solid red; */
 }
-/* Search Section  */
+
+/* Search input's Section  */
 .search-section {
   display: flex;
   justify-content: space-between;
@@ -33,12 +46,13 @@
   padding: 2px 18px;
   width: 100%;
 }
-
+/* Search Box  */
 .search-box {
   width: 100%;
   padding-left: 5px;
 }
 
+/* Search Input element */
 .search-input {
   width: 100%;
   padding: 10px 15px;
@@ -51,7 +65,7 @@
   line-height: normal;
 }
 
-/* Category Section */
+/*Filter section Category Tabs Section */
 .category-list-section {
   list-style-type: none;
   display: flex;
@@ -61,6 +75,7 @@
   gap: 10px;
 }
 
+/* Each category items */
 .category-item {
   border-radius: 6px;
   border: 1px solid #adadad;
@@ -75,6 +90,7 @@
   cursor: pointer;
 }
 
+/* Active Category Item */
 .active-category-item {
   border-radius: 6px;
   border: 1px solid #ff941a;
@@ -83,7 +99,7 @@
   font-weight: 600;
 }
 
-/* Category wise selected dish cound + Toggle veg or Non-veg */
+/* Category wise selected dish count + Toggle veg or Non-veg */
 .category-dish-seleted-count {
   display: flex;
   justify-content: space-between;
@@ -108,6 +124,7 @@
   gap: 15px;
 }
 
+/* Veg and Non-Veg card */
 .toggle-switch {
   display: flex;
   align-items: center;
@@ -150,11 +167,11 @@
   transition: background 0.25s ease, opacity 0.25s ease;
 }
 
+/* Toggle squre shape */
 .square {
   width: 20px; /* square width */
   height: 20px; /* square height */
   border-radius: 6px;
-
   background: transparent;
   display: flex;
   align-items: center;
@@ -170,7 +187,7 @@
 }
 
 .nonVeg-square {
-  border: 1.182px solid #e2574c;
+  border: 1.182px solid #e2574c; /* red border */
 }
 
 /* inner circle inside the square */
@@ -185,7 +202,7 @@
 }
 
 .nonVeg-circle {
-  background: #e2574c;
+  background: #e2574c; /* red dot */
 }
 
 /* Veg label toggling */
@@ -214,7 +231,9 @@
   background: rgba(255, 255, 255, 0.32);
 }
 
+/* ======================= */
 /* Dishes List Section */
+/* ======================= */
 .dishlist-section {
   display: flex;
   flex-direction: column;
@@ -223,18 +242,33 @@
   gap: 15px;
   padding: 5px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
+/* ====================== */
 /* Dish Card Section */
+/* ====================== */
+/* Dishcard container */
 .dish-card {
   background-color: #ffffff;
-  border-radius: 4px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #f0f0f0;
 }
 
+/* One dish contant */
+.dish-details-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Dish Name */
 .dish-name-type {
   display: flex;
   justify-content: flex-start;
@@ -242,15 +276,8 @@
   gap: 10px;
 }
 
-.dish-details-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.dish-details-content p {
+/* Dish Name and Food type(veg/nonVeg) card */
+.dish-details-content h2 {
   color: #1c1c1c;
   font-size: 14px;
   font-style: normal;
@@ -258,6 +285,7 @@
   line-height: normal;
 }
 
+/* Veg or Non-veg symbols */
 .veg-symbol,
 .nonVeg-symbol {
   height: 15px;
@@ -273,7 +301,7 @@
 }
 
 .nonVeg-symbol {
-  border: 1.182px solid #e2574c;
+  border: 1.182px solid #e2574c; /* red border */
 }
 
 .veg-dot-symbol {
@@ -299,6 +327,7 @@
   line-height: normal;
 }
 
+/* Ingredient's Page opening link */
 .ingredient-link {
   color: #f80;
   font-size: 14px;
@@ -315,18 +344,20 @@
   cursor: pointer;
 }
 
-/* Dish card right side */
+/* Dish card right side image + add/remove btn card*/
 .dish-img-content {
   position: relative;
-  border: 1px solid;
+  margin-bottom: 10px;
 }
 
+/* Dish image */
 .dish-img-content img {
   width: 100px;
   height: 100px;
   border-radius: 12px;
 }
 
+/* Common add/remove btn */
 .dish-img-content button {
   display: flex;
   height: 30px;
@@ -342,7 +373,6 @@
 
   text-align: center;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
@@ -357,10 +387,48 @@
 .add-btn {
   color: #73ae78 !important;
 }
+.add-btn:hover {
+  background-color: #73ae78;
+  color: #f9f9f9 !important;
+}
 
 .remove-btn {
   color: #ff941a !important;
   padding: 6px 7px;
+}
+
+.remove-btn:hover {
+  background-color: #f80;
+  color: #f9f9f9 !important;
+}
+
+/* ========================= */
+/* Ingredients Section */
+/* ========================= */
+
+/* Ingredients Container */
+.ingredient-container {
+  min-height: 100vh;
+}
+
+/* Ingredient Close Btn */
+.modal-close-btn {
+  cursor: pointer;
+  display: block;
+  padding: 15px 5px;
+  line-height: 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 425px;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 /* Top section (title + image) */
@@ -372,10 +440,7 @@
   margin-top: 25px;
 }
 
-.top-section .content {
-  flex: 1;
-}
-
+/* Ingredients => Food Name */
 .content h3 {
   color: #242424;
   font-weight: 600;
@@ -383,12 +448,15 @@
   margin-bottom: 6px;
 }
 
-.content p {
+/* Ingredients => Food description + Ingredients title p tag */
+.content p,
+.ingredient-title p {
   color: #2e2e2e;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 
+/* Ingredients => Food image */
 .top-section img {
   width: 140px;
   height: auto;
@@ -401,19 +469,14 @@
   padding: 12px 16px;
 }
 
+/* Ingredients => ingredinets Name */
 .ingredient-title h2 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.ingredient-heading {
-  font-size: 18px;
-  font-weight: 400;
-  color: #555;
-  text-align: left;
-}
-
+/* Ingredients custom line */
 .line {
   width: 100%;
   height: 1px;
@@ -421,14 +484,14 @@
   margin-top: 10px;
 }
 
-/* Ingredients list */
-
+/* Ingredients items list */
 .ingredients-items {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Ingredients Item */
 .ingredients-items li {
   display: flex;
   justify-content: space-between;
@@ -436,6 +499,7 @@
   padding: 10px 16px;
 }
 
+/* Ingredients item name + quantity */
 .ingredients-items h2,
 .ingredients-items p {
   font-size: 12px;
@@ -444,71 +508,151 @@
   margin: 0;
 }
 
-/* Model css */
-
-.modal {
-  background-color: #ffffff;
-  height: 100vh;
-  width: 100%;
-}
-.modal > .header {
-  width: 100%;
-  border-bottom: 1px solid gray;
-  font-size: 18px;
-  text-align: center;
-}
-.modal > .content {
-  width: 100vw;
-}
-.modal > .actions {
-  width: 100%;
-  padding: 10px 5px;
-  margin: auto;
-  text-align: center;
+/* ========================= */
+/* Toatl Dishes Selected Count section */
+/* ========================= */
+.total-dish-selected-container {
+  background-color: #f9f9f9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px;
+  width: 425px;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
-.model-close-header {
-  padding: 25px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Total dish count text card */
+.total-dish-count-selected {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #ffffff;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1.025px solid;
 }
 
-.modal-close-btn {
-  cursor: pointer;
-  position: absolute;
-  display: block;
-  padding: 15px 5px;
-  line-height: 20px;
-  left: 0px;
-  top: 0;
-  font-size: 16px;
+/* Total dish count text */
+.total-dish-count-selected p {
+  color: #1c1c1c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Right arrow btn */
+.go-to-selected-dishs {
+  background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
+  padding: 8px 8px;
+}
+
+/* Continue btn */
+.continue-btn {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1c1c1c;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  width: 100%;
+  padding: 10px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* ============================== */
+/* All Selected dish container - view all user's added dish like a Cart */
+/* ============================== */
+.all-selected-dish-container {
+  min-height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 5px;
+  padding: 10px;
+
+  width: 425px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Selected dish each item */
+.dish-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted #555;
+  padding: 5px;
+}
+
+/* Dish item's deatils */
+.dish-item-details {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
-  background-color: transparent;
+  gap: 8px;
 }
 
-/* No Dishes section */
-.no-dishes-container {
-  width: 100%;
-  height: 250px;
+/* Dish image */
+.dish-item-details img {
+  height: 50px;
+  width: 50px;
+}
+
+/* Dish name */
+.dish-item-details h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Remove btn */
+.dish-item .selected-remove-btn {
+  background-color: #fff;
+  color: #ff941a;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.dish-item .selected-remove-btn:hover {
+  color: #f80;
+}
+
+/* ============================ */
+/* No Filter dish and Selected dish Empty Message  */
+/* ============================ */
+.no-dishes-msg {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-.no-dishes-container p {
-  font-size: 20px;
+  justify-content: center;
+  height: 300px;
+  font-size: 1.2rem;
   font-weight: 500;
-  color: #1c1c1c;
+  color: #555;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 400px;
 }

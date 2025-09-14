@@ -112,47 +112,46 @@ const Filters = (props) => {
         </p>
 
         {/* Toggle Veg or Non-veg */}
-        <div className="veg-nonVeg-card">
+
+        <div className="toggle-row">
           {/* Veg */}
-          <div className="toggle-row">
-            <div className="toggle-switch">
-              <input
-                type="checkbox"
-                id="vegOnly"
-                className="toggle-veg-only"
-                onChange={onVegOnlyChange}
-                checked={vegOnly}
-              />
-              <label htmlFor="vegOnly" className="toggle-veg-label">
-                {/* the small rounded rectangle shown by your arrow */}
-                <span className="track-line" aria-hidden="true"></span>
+          <div className="toggle-switch">
+            <input
+              type="checkbox"
+              id="vegOnly"
+              className="toggle-veg-only"
+              onChange={onVegOnlyChange}
+              checked={vegOnly}
+            />
+            <label htmlFor="vegOnly" className="toggle-veg-label">
+              {/* the small rounded rectangle shown by your arrow */}
+              <span className="track-line" aria-hidden="true"></span>
 
-                {/* the rounded square that moves */}
-                <span className="square veg-square">
-                  <span className="circle veg-circle" />
-                </span>
-              </label>
-            </div>
+              {/* the rounded square that moves */}
+              <span className="square veg-square">
+                <span className="circle veg-circle" />
+              </span>
+            </label>
+          </div>
 
-            {/* Non-Veg */}
-            <div className="toggle-switch">
-              <input
-                type="checkbox"
-                id="nonvegOnly"
-                className="toggle-nonveg-only"
-                onChange={onNonVegOnlyChange}
-                checked={nonvegOnly}
-              />
-              <label htmlFor="nonvegOnly" className="toggle-nonveg-label">
-                {/* the small rounded rectangle shown by your arrow */}
-                <span className="track-line" aria-hidden="true"></span>
+          {/* Non-Veg */}
+          <div className="toggle-switch">
+            <input
+              type="checkbox"
+              id="nonvegOnly"
+              className="toggle-nonveg-only"
+              onChange={onNonVegOnlyChange}
+              checked={nonvegOnly}
+            />
+            <label htmlFor="nonvegOnly" className="toggle-nonveg-label">
+              {/* the small rounded rectangle shown by your arrow */}
+              <span className="track-line" aria-hidden="true"></span>
 
-                {/* the rounded square that moves */}
-                <span className="square nonVeg-square">
-                  <span className="circle nonVeg-circle" />
-                </span>
-              </label>
-            </div>
+              {/* the rounded square that moves */}
+              <span className="square nonVeg-square">
+                <span className="circle nonVeg-circle" />
+              </span>
+            </label>
           </div>
         </div>
       </div>
